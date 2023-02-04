@@ -62,7 +62,7 @@ list_of_lname = get_friends_lname(list_of_id)
 list_tuple = list_of_tuple(list_of_id, list_of_bdate, list_of_name, list_of_lname)
             #  В этом блоке кода представлена реализация бд на  Sqlite3  а так де запись в бд данныз из вк
 # ----------------------------------------------------------------------------
-
+print(list_tuple)
 
 try:
     conn = sq.connect(r'./congrats.db')  # cozdaine DB
@@ -71,14 +71,16 @@ try:
 
     cur.execute('''CREATE TABLE IF NOT EXISTS MyFriends(
         user_id INT PRIMARY KEY,
-        fname TEXT
-        lname TEXT
+        fname TEXT,
+        lname TEXT,
         bdate TEXT);
         ''')
 
-    cur.executemany(''''INSERT INTO MyFriends VALUES(?, ?, ?, ?)''', list_tuple)
+    cur.executemany('''INSERT INTO MyFriends 
+    (user_id, fname, lname, bdate)
+    VALUES(?, ?, ?, ?);''', list_tuple)
     conn.commit()
-    print("Запись успешно вставлена ​​в таблицу sqlitedb_developers ", cur.rowcount)
+    print("Запись успешно вставлена в таблицу MyFriends  ", cur.rowcount)
     cur.close()
 
 except sq.Error as error:
