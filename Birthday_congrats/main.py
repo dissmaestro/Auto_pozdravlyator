@@ -1,6 +1,7 @@
+
 import sqlite3 as sq
 import vk_api
-
+import datetime
 #  В этом блоке кода представлены функции реализующие получение информации от вк
 # ----------------------------------------------------------------------------
 vk_session = vk_api.VkApi('89257828987', 'Maks1302')  # 89257828987  Maks1302
@@ -53,6 +54,13 @@ def list_of_tuple(list_id: list, bdate: list, name: list, lname: list):
         list_of_all.append(tuple(list_of_one))
     return list_of_all
 
+def dm():
+    today = datetime.datetime.today()
+    sr_d = str(today.day)
+    sr_m = str(today.month)
+    sr_dm = sr_d + '.' + sr_m
+    return sr_dm
+
 list_of_id = get_friends_id(my_id)
 
 list_of_bdate = get_friends_bdate(list_of_id)
@@ -63,6 +71,7 @@ list_tuple = list_of_tuple(list_of_id, list_of_bdate, list_of_name, list_of_lnam
             #  В этом блоке кода представлена реализация бд на  Sqlite3  а так де запись в бд данныз из вк
 # ----------------------------------------------------------------------------
 print(list_tuple)
+
 
 try:
     conn = sq.connect(r'./congrats.db')  # cozdaine DB
@@ -81,6 +90,10 @@ try:
     VALUES(?, ?, ?, ?);''', list_tuple)
     conn.commit()
     print("Запись успешно вставлена в таблицу MyFriends  ", cur.rowcount)
+
+    cur.execute('''SELECT user_id FROM MyFriends WHERE bdate = '4.1' ''')
+    rec = cur.fetchone()
+
     cur.close()
 
 except sq.Error as error:
