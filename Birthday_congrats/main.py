@@ -114,6 +114,7 @@ finally:
     if conn:
         conn.close()
         print("Соединение с SQLite закрыто")
+#
 
 
 
