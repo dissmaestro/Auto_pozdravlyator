@@ -4,9 +4,20 @@ import vk_api
 import datetime
 #  В этом блоке кода представлены функции реализующие получение информации от вк
 # ----------------------------------------------------------------------------
-vk_session = vk_api.VkApi('89257828987', 'Maks1302')  # 89257828987  Maks1302
-vk_session.auth()
-vk = vk_session.get_api()
+
+
+
+try:
+    vk_session = vk_api.VkApi('89257828987', 'Maks1302')  # 89257828987  Maks1302
+    vk_session.auth()
+    vk = vk_session.get_api()
+
+except vk_api.exceptions.Captcha as captcha:
+    sid = captcha.sid # Получение sid
+    url = captcha.get_url() # Получить ссылку на изображение капчи
+    img = captcha.get_image() # Получить изображение капчи (jpg)
+    print(f"Беда с каптчей вот sid {sid} url на картинку {url} img в jpg {img}")
+
 my_id = 781028675 #781028675
 
 
@@ -19,7 +30,8 @@ def get_friends_bdate(id_friend: list):  # return list of id frirnd
     birthday = list()
     for i in range(len(id_friend)):
         bdate_json = (vk_session.method("friends.get", {"fields": {"bdate": int(id_friend[i])}}))
-        bdate_clear = bdate_json.get('items')[i].get('bdate')
+        bdate_list = bdate_json.get('items')[i].get('bdate').split('.', 2)
+        bdate_clear = str(bdate_list[0]) + '.' + str(bdate_list[1])
         birthday.append(bdate_clear)
 
     return birthday
@@ -80,9 +92,9 @@ try:
 
     cur.execute('''CREATE TABLE IF NOT EXISTS MyFriends(
         user_id INT PRIMARY KEY,
-        fname TEXT,
-        lname TEXT,
-        bdate TEXT);
+        fname VCHAR,
+        lname VCHAR,
+        bdate VCHAR);
         ''')
 
     cur.executemany('''INSERT INTO MyFriends 
@@ -102,3 +114,6 @@ finally:
     if conn:
         conn.close()
         print("Соединение с SQLite закрыто")
+
+
+
