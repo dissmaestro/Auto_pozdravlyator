@@ -19,7 +19,7 @@
         },
         "rfc2109": false,
         "secure": true,
-        "value": "vk1.a.72GBiuW06pnFOfiGVKWAwbHlTRQy90jKnt1VGdUpJBGl-9Exx6AbKr3XtIHypHjMmtdomSjnBj20kF362oYAzUZFIcbBCfPqYA4XixtHzSvl0Pj20X6M7hpVeZHK2A8OgPEipBnSZpdPyAXt8eHJiVJCZ_0RFilZQmIZ3OLMNeA",
+        "value": "vk1.a.kTLyNUQODFQag2D5E8HhP4yylBMXUK5R35p1W6a4V_y9HGmeCjV1CjMBrbxQ8mGdFCOfgdzQiihyY7TD2W2jWjQvj6ej4U67oP9vJDSRBt0Ka8RSqvBHewBaeBzrH2ln3i9tF4BXALO2PlXapBHUpbSk3mb8bYzBioUBujHZ2Io",
         "version": 0
       },
       {
@@ -59,26 +59,7 @@
         },
         "rfc2109": false,
         "secure": true,
-        "value": "1_yoedzSSJ7HxvlB7xei50KUgOnKIfy6GOY4PurfzhYO6Wwho0PW9_b5jySvkfivWoz2JiPGqIpRx4unxfZXBhdg",
-        "version": 0
-      },
-      {
-        "comment": null,
-        "comment_url": null,
-        "discard": false,
-        "domain": ".vk.com",
-        "domain_initial_dot": true,
-        "domain_specified": true,
-        "expires": null,
-        "name": "remixstid",
-        "path": "/",
-        "path_specified": true,
-        "port": null,
-        "port_specified": false,
-        "rest": {},
-        "rfc2109": false,
-        "secure": true,
-        "value": "527440128_JgrtvWuazpVBPlQxHrTwjBrZteqIbYfUWOuFinTFJK8",
+        "value": "1_4X62bbbv2Yud-kpOvIj-I-Oq9DxhruAK-MJuWiac6GrLFaRdHwJgMdqHlxgrMSABUTvV3OuQ7wLtsw6PblTy3g",
         "version": 0
       },
       {
@@ -97,7 +78,7 @@
         "rest": {},
         "rfc2109": false,
         "secure": true,
-        "value": "9098210085459506566_R07lAjkP7pB8EJPT5FtPZcDfKitzajYrRh0ZNSqrXqX",
+        "value": "9102713686589422282_znSWIBkOMRp0fbFV02IKgUNpkDO0ZZzfWIZZ4FD4fQs",
         "version": 0
       },
       {
@@ -137,7 +118,7 @@
         },
         "rfc2109": false,
         "secure": true,
-        "value": "YjVkMzFhNWYxZDI1NDczYTc2MjdmNmI0",
+        "value": "ZjBhM2E1YjRiN2E2MjJlZWJkMmE0Zjhk",
         "version": 0
       },
       {
@@ -158,7 +139,7 @@
         },
         "rfc2109": false,
         "secure": true,
-        "value": "vk1.a.grpoXv4zT0erXVZyj5kDij7conRh42WdQ1EwDWIexJu5HSeVcK02LZ-nij2qTs-uY6MNv3kK__dkEINBlGRCU8kkc0dGo9rQYCrWPVnmR_wy38IsXjOoPcGB7j22B1Fg7o3rJ7H_Mqbd0X39T0IWigUu7K716c_0lO25m1PnhRG4Txy16i9w57SLOSkEtGKQ",
+        "value": "vk1.a.TKr_d5j1Z1AQ_bphLP-uyQ0KMQAqcLf9gGxOo-e80l2pfCIGIziTOcpCBv67JB6X-mRX78nkSiPoy8c_tm7h08sBDOtFmIF2mb-673TrB6F1uORW9yN-XFzHGBJCRtl08r3pBKBhME8wz0jDdZ072Ju9TX48Brbsxbg3hytfLeqdkyzulzfE_d_YQ-S4FoXn",
         "version": 0
       }
     ],
